@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "2048-app",
+    "name": "physics-2048",
     "slug": "2048-app",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -9,10 +9,10 @@
     "userInterfaceStyle": "automatic",
     "ios": {
       "icon": "./assets/expo.icon",
-      "bundleIdentifier": "com.panjha.2048-app",
+      "bundleIdentifier": "com.panjha.physics2048"
     },
     "android": {
-      "package": "com.panjha.2048-app"
+      "package": "com.panjha.physics2048",
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
         "foregroundImage": "./assets/images/android-icon-foreground.png",
