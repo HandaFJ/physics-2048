@@ -9,7 +9,7 @@
     "userInterfaceStyle": "automatic",
     "ios": {
       "icon": "./assets/expo.icon",
-      "bundleIdentifier": "com.panjha.2048-app"
+      "bundleIdentifier": "com.panjha.2048-app",
     },
     "android": {
       "package": "com.panjha.2048-app"
