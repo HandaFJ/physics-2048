@@ -35,10 +35,20 @@
         }
       ]
     ],
-
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
-    }
+    },
+    "extra": {
+      "router": {
+        "asyncRoutes": {
+          "web": true
+        }
+      },
+      "eas": {
+        "projectId": "6bb2e31b-13f3-4039-a196-fdb2e1f93ed2"
+      }
+    },
+    "owner": "panjha"
   }
 }
