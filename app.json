@@ -12,6 +12,7 @@
       "bundleIdentifier": "com.panjha.2048-app"
     },
     "android": {
+      "package": "com.panjha.2048-app"",
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
         "foregroundImage": "./assets/images/android-icon-foreground.png",
