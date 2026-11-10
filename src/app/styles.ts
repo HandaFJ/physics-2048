@@ -1,0 +1,140 @@
+import { StyleSheet, Dimensions } from "react-native";
+
+const { width } = Dimensions.get("window");
+const BOARD_WIDTH = width * 0.88;
+const CELL_GAP = 8;
+const CELL_SIZE = (BOARD_WIDTH - CELL_GAP * (4 + 1)) / 4;
+
+export const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "#faf8ef",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  header: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    width: "100%",
+    position: "relative",
+    marginBottom: 4,
+  },
+  title: { fontSize: 28, fontWeight: "bold", color: "#776e65" },
+  debugToggleButton: {
+    position: "absolute",
+    right: 20,
+    backgroundColor: "#d8ccc0",
+    paddingHorizontal: 8,
+    paddingVertical: 4,
+    borderRadius: 4,
+  },
+  debugToggleText: { fontSize: 11, color: "#776e65", fontWeight: "bold" },
+  score: {
+    fontSize: 16,
+    fontWeight: "bold",
+    color: "#776e65",
+    marginVertical: 4,
+  },
+  board: {
+    width: BOARD_WIDTH,
+    height: BOARD_WIDTH,
+    backgroundColor: "#bbada0",
+    borderRadius: 6,
+    padding: CELL_GAP,
+    justifyContent: "space-between",
+    position: "relative",
+    overflow: "hidden",
+  },
+  physicsBall: {
+    position: "absolute",
+    top: BOARD_WIDTH / 2 - 25,
+    left: BOARD_WIDTH / 2 - 25,
+    width: 50,
+    height: 50,
+    borderRadius: 25,
+    backgroundColor: "rgba(255, 255, 255, 0.35)",
+    borderWidth: 1.5,
+    borderColor: "rgba(255, 255, 255, 0.6)",
+    zIndex: 0,
+  },
+  row: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+  },
+  cellBackground: {
+    width: CELL_SIZE,
+    height: CELL_SIZE,
+    backgroundColor: "#cdc1b4",
+    borderRadius: 3,
+  },
+  tileLayer: {
+    position: "absolute",
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    zIndex: 1,
+  },
+  tile: {
+    position: "absolute",
+    width: CELL_SIZE,
+    height: CELL_SIZE,
+    borderRadius: 3,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  tileText: { fontSize: 22, fontWeight: "bold", color: "#776e65" },
+  tile2: { backgroundColor: "#eee4da" },
+  tile4: { backgroundColor: "#ede0c8" },
+  tile8: { backgroundColor: "#f2b179" },
+  tile16: { backgroundColor: "#f59563" },
+  tile32: { backgroundColor: "#f67c5f" },
+  tile64: { backgroundColor: "#f65e3b" },
+  tile128: { backgroundColor: "#edcf72" },
+  tile256: { backgroundColor: "#edcc61" },
+  tile512: { backgroundColor: "#edc850" },
+  tile1024: { backgroundColor: "#edc53f" },
+  tile2048: { backgroundColor: "#edc22e" },
+  instructionContainer: {
+    marginTop: 25,
+    height: 90,
+    justifyContent: "center",
+  },
+  instructionText: {
+    fontSize: 15,
+    fontWeight: "bold",
+    color: "#8f7a66",
+    letterSpacing: 0.5,
+  },
+  controlsContainer: {
+    marginTop: 15,
+    alignItems: "center",
+    gap: 6,
+    height: 90,
+  },
+  horizontalControls: { flexDirection: "row", gap: 12 },
+  controlButton: {
+    backgroundColor: "#8f7a66",
+    paddingVertical: 6,
+    paddingHorizontal: 12,
+    borderRadius: 4,
+  },
+  btnText: { color: "#fff", fontWeight: "bold", fontSize: 12 },
+  resetButton: {
+    marginTop: 10,
+    backgroundColor: "#776e65",
+    paddingHorizontal: 12,
+    paddingVertical: 6,
+    borderRadius: 4,
+  },
+  resetButtonText: { color: "#fff", fontSize: 13, fontWeight: "bold" },
+});
+
+export const CONSTANTS = {
+  BOARD_SIZE: 4,
+  ACCEL_THRESHOLD: 0.55,
+  BOARD_WIDTH,
+  CELL_GAP,
+  CELL_SIZE,
+};

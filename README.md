@@ -1,56 +1,50 @@
-# Welcome to your Expo app 👋
+# 傾けて遊ぶ物理パズル 2048
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+スマホの傾きセンサー（ジャイロ・加速度）を使って遊ぶ、新感覚の2048パズルゲームです！
+画面の上でゴロゴロと転がるボールを頼りに、スマホを傾けて数字のタイルを動かしていきます。
 
-## Get started
+---
 
-1. Install dependencies
+## このアプリの特徴
 
-   ```bash
-   npm install
-   ```
+- **ボタンを使わない直感操作**: 画面のボタンではなく、**スマホ本体を傾ける**ことで数字が重力に従ってスライドします。
+- **物理ボールのビジュアルガイド**: 画面上で転がる半透明のボールを見れば、「今どちらに傾いているか」がひと目でわかります。
+- **快適なプレイ環境**: 誤爆を防ぐための傾き調整（ヒステリシス制御）や、スムーズなアニメーションを搭載しています。
 
-2. Start the app
+---
 
-   ```bash
-   npx expo start
-   ```
+## 遊び方（動かし方）
 
-In the output, you'll find options to open the app in a
+1. **アプリを起動する**
+   お手元のスマホに「Expo Go」アプリをインストールし、画面に表示されるQRコードを読み込んで起動します。
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+2. **スマホを傾けてプレイする**
+   - スマホを**右**に傾けると ➔ タイルが**右**に寄ります
+   - スマホを**左**に傾けると ➔ タイルが**左**に寄ります
+   - スマホを**奥**に傾けると ➔ タイルが**上**に寄ります
+   - スマホを**手前**に傾けると ➔ タイルが**下**に寄ります
 
-You can start developing by editing the files inside the **src/app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+3. **ルール**
+   同じ数字のタイル同士がぶつかると、合体して数字が大きくなります（2 ➔ 4 ➔ 8 ➔ 16 …）。どこまで大きな数字を作れるか挑戦してみましょう！
 
-## Get a fresh project
+---
 
-When you're ready, run:
+## 開発者向け情報（動かし方・セットアップ）
+
+このプロジェクトは [Expo](https://expo.dev) と React Native を使用して開発されています。
+
+### 1. 依存関係のインストール
+
+プロジェクトフォルダを開き、ターミナルで以下のコマンドを実行します。
 
 ```bash
-npm run reset-project
+npm install
 ```
 
-This command will move the starter code to the **example** directory and create a blank **src/app** directory where you can start developing.
+2. アプリの起動
 
-### Other setup steps
+```Bash
+npx expo start
+```
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+表示されたQRコードをスマホの「Expo Go」アプリでスキャンして実機でテストしてください。（※センサーを使用するため、実機でのプレイを推奨しています）
